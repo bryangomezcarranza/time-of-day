@@ -45,8 +45,7 @@
 	    <p>Explain what your page does and how it works here!</p>
 	  <img id="my-pic" src="http://dummyimage.com/300x400" alt="Time of Day Image" class="flexible">
      <footer>
-      <p><small>&copy; 2022 by 
-          YOUR NAME HERE, All Rights Reserved ~ 
+      <p><small>&copy; <a id="myScript"> currenDate </a> by Bryan Gomez, All Rights Reserved ~ 
           <a id="html-checker" href="#" target="_blank">Check HTML</a> ~ 
           <a id="css-checker" href="#" target="_blank">Check CSS</a></small>
      </p>
@@ -64,11 +63,13 @@
 	*/
 
 	let myDate = new Date();
+	let myYear = myDate.myYear
 	let myHour = myDate.getHours();
 	let myGreeting = "";
 	let myColor = "";
 	let myPic = "";
 
+	let currentDate =  new Date().getFullYear()
 
 	console.log(myHour)
 
@@ -98,10 +99,12 @@
 
 
 
-	
+	//let currentDate =  new Date().getFullYear()
 
 	myPic = "images/" + myPic;
 
+
+	document.getElementById("myScript").innerHTML = currentDate;
 	document.getElementById("my-pic").src = myPic
 	document.querySelector("html").style.backgroundColor = myColor;
 	document.getElementById("my-greeting").innerHTML = myGreeting;
