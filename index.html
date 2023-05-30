@@ -72,17 +72,33 @@
 
 	console.log(myHour)
 
-	if(myHour<12) {
+
+
+	if(myHour >= 5 && myHour < 12) {
 		//alert("good morning!");
 		myGreeting = "Good morning!";
 		myColor = "orange";
 		myPic = "morning.jpg"
-	} else {
+	} else if(myHour < 18 && myHour >= 12) {
 		//alert("good afternoon!");
 		myGreeting = "Good afternoon!";
 		myColor = "green";
 		myPic = "afternoon.jpg"
+	} else if(myHour >= 18 && myHour < 23) {
+		//alert("good afternoon!");
+		myGreeting = "Good evening!";
+		myColor = "purple";
+		myPic = "evening.jpg"
+	} else {
+		//alert("good afternoon!");
+		myGreeting = "Good night!";
+		myColor = "black";
+		myPic = "night.jpg"
 	}
+
+
+
+	
 
 	myPic = "images/" + myPic;
 
